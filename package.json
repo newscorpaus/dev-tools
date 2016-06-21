@@ -1,0 +1,13 @@
+{
+	"name": "dev-tools",
+	"version": "0.1.0",
+	"description": "Dev-tools for NewsCorp engineering team",
+	"scripts": {
+	},
+	"pre-commit": ["lint"],
+	"author": "",
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}

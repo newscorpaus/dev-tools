@@ -1,0 +1,87 @@
+{
+	"rules": {
+		"object-curly-spacing": [2, "always", {
+			"objectsInObjects": false,
+			"arraysInObjects": false
+		}],
+		"space-before-blocks": [2, "always"],
+		"space-before-function-paren": [2, "never"],
+		"no-empty": 2,
+		"comma-style": [2, "last"],
+		"operator-linebreak": [2, "after"],
+		"space-unary-ops": [2,
+			{
+				"nonwords": false,
+			}
+		],
+		"space-infix-ops": 2,
+		"camelcase": [2,
+			{
+				"properties": "never"
+			}
+		],
+		"no-with": 2,
+		"no-mixed-spaces-and-tabs": 2,
+		"no-trailing-spaces": 2,
+		"comma-dangle": [2, "never"],
+		"max-len": [2, 130, 4,
+			{
+				ignoreComments: true,
+				"ignoreUrls": true,
+				"ignorePattern": "<esi:"
+			}
+		],
+		"consistent-this": [2, "self"],
+		"yoda": [2, "never"],
+		"spaced-comment": [2, "always"],
+
+		"indent": [2, "tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+		"linebreak-style": [2, "unix"],
+		"semi": [2, "always"],
+		"no-multi-spaces": 0,
+		"key-spacing"    : 0,
+		"no-shadow"      : 0,
+		"no-console"     : 0
+	},
+
+	"ecmaFeatures": {
+		"arrowFunctions": true,
+		"binaryLiterals": true,
+		"blockBindings": true,
+		"classes": false,
+		"defaultParams": true,
+		"destructuring": true,
+		"forOf": true,
+		"generators": true,
+		"modules": true,
+		"objectLiteralComputedProperties": true,
+		"objectLiteralDuplicateProperties": true,
+		"objectLiteralShorthandMethods": true,
+		"objectLiteralShorthandProperties": true,
+		"octalLiterals": true,
+		"regexUFlag": true,
+		"regexYFlag": true,
+		"spread": true,
+		"superInFunctions": false,
+		"templateStrings": true,
+		"unicodeCodePointEscapes": true,
+		"globalReturn": true,
+		"jsx": true
+	},
+
+	"env": {
+		"node" : true,
+		"browser": true,
+		"es6": true
+	},
+	"globals": {
+		"moment": true,
+		"jQuery": true
+	},
+	"extends": "eslint:recommended"
+}
