@@ -1,13 +1,15 @@
 {
-	"name": "dev-tools",
-	"version": "0.1.0",
-	"description": "Dev-tools for NewsCorp engineering team",
-	"scripts": {
-	},
-	"pre-commit": ["lint"],
-	"author": "",
-	"dependencies": {
-	},
-	"devDependencies": {
-	}
+  "name": "dev-tools",
+  "version": "0.1.0",
+  "description": "Dev-tools for NewsCorp engineering team",
+  "scripts": {},
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {
+    "stylelint": "^6.7.0",
+    "stylelint-config-standard": "^9.0.0"
+  }
 }
