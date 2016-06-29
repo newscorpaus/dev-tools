@@ -1,7 +1,27 @@
-# CSS
+# CSS Standards
 
-Defining the coding standards the NewsCorp Engineering team follows
+Below are the NewsCorp CSS standards
 
-## Description ##
+## SASS ##
 
-@todo
+We use SASS as our CSS precompiler
+
+## Standards ##
+
+We use StyleLint to manage our CSS coding standards. The configuration can be found "[here][1]"
+
+## StyleLint ##
+Running:
+stylelint "examples/*.scss"
+
+## Implementing linting ##
+
+Document scripts we have for SASS->CSS @todo
+
+Explain how to implement methods in a new project @todo
+
+## Helpful extensions ##
+[Autoprefixer][2]
+
+[1]: ../.stylelintrc.json
+[2]: https://www.npmjs.com/package/autoprefixer

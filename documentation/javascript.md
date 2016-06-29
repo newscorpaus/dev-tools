@@ -1,7 +1,20 @@
-# CSS
+# Javascript Standards
 
-Defining the coding standards the NewsCorp Engineering team follows
+Below are the NewsCorp Javascript standards
 
-## Description ##
+## Standards ##
 
-@todo
+We use [ESLint][2] to manage our Javascript coding standards. The configuration can be found "[here][1]"
+
+## ESLint ##
+Running:
+./node_modules/.bin/eslint ./examples/example.js
+
+## Implementing linting ##
+
+Document scripts we have for linting @todo
+
+Explain how to implement methods in a new project @todo
+
+[1]: ../.eslintrc.json
+[2]: http://eslint.org/
