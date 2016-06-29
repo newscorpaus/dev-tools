@@ -9,6 +9,10 @@
   "author": "",
   "dependencies": {},
   "devDependencies": {
+    "echint": "^1.5.3",
+    "eslint": "^2.13.1",
+    "eslint-plugin-json": "^1.2.0",
+    "jsonlint": "^1.6.2",
     "stylelint": "^6.7.0",
     "stylelint-config-standard": "^9.0.0"
   }
