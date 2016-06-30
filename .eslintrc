@@ -1,7 +1,4 @@
 {
-	"plugin": [
-		"json"
-	],
 	"rules": {
 		"object-curly-spacing": [2, "always", {
 			"objectsInObjects": false,
