@@ -13,6 +13,8 @@ We use StyleLint to manage our CSS coding standards. The configuration can be fo
 ## StyleLint ##
 Running:
 stylelint "examples/*.scss"
+npm install stylelint stylelint-scss
+
 
 ## Implementing linting ##
 
