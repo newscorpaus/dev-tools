@@ -1,26 +1,29 @@
 {
-	"name": "dev-tools",
-	"version": "0.1.0",
-	"description": "dev-tools for NewsCorp front-end engineering team",
-	"scripts": {
-		"pre-commit": "npm run lint",
-		"lint": "npm run lint-css; npm run lint-js",
-		"lint-css": "stylelint '**/*.{scss,css}'",
-		"lint-js": "eslint **/*.js"
-	},
-	"pre-commit": [
-    	"pre-commit"
-  	],
-  	"author": "",
-  	"dependencies": {},
-  	"devDependencies": {
-		"echint": "^1.5.3",
-		"eslint": "^2.13.1",
-		"eslint-plugin-json": "^1.2.0",
-		"jsonlint": "^1.6.2",
-		"pre-commit": "^1.1.3",
-		"stylelint": "^6.7.1",
-		"stylelint-config-standard": "^9.0.0",
-		"stylelint-scss": "^1.2.0"
-  	}
+  "name": "dev-tools",
+  "version": "0.1.0",
+  "description": "dev-tools for NewsCorp front-end engineering team",
+  "scripts": {
+    "pre-commit": "npm run lint",
+    "lint": "npm run lint-css; npm run lint-js",
+    "lint-css": "stylelint '**/*.scss'",
+    "lint-js": "eslint **/*.js",
+    "build-css": "node scripts/css.js"
+  },
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {
+    "echint": "^1.5.3",
+    "eslint": "^2.13.1",
+    "eslint-plugin-json": "^1.2.0",
+    "fs-extra": "^0.30.0",
+    "jsonlint": "^1.6.2",
+    "node-sass": "^3.8.0",
+    "pre-commit": "^1.1.3",
+    "stylelint": "^6.7.1",
+    "stylelint-config-standard": "^9.0.0",
+    "stylelint-scss": "^1.2.0"
+  }
 }
