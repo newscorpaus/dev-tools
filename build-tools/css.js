@@ -2,7 +2,7 @@ var sass = require('node-sass');
 var fs = require('fs-extra');
 var utils = require('./utils');
 var autoprefixer = require('autoprefixer');
-var postcss      = require('postcss');
+var postcss = require('postcss');
 
 module.exports = {
 	/**
