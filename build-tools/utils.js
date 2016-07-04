@@ -1,26 +1,26 @@
 var glob = require('glob');
-var chalk = require('chalk');
+var colors = require('colors/safe');
+var fs = require('fs');
 
 module.exports = {
 	/**
-	 * Higlights an error and ensures an Error is thrown so that the build script exits in shell.
-	 * It assumes {@param err} indicates an error
+	 * Tests error
 	 *
-	 * @param {*} err The error indicator
-	 */
+	 * @param err
+     */
 	testError: function(err) {
 		if (err) {
-			console.error(chalk.bgRed.black(err));
+			console.log(colors.red(err));
 			throw Error();
 		}
 	},
 
 	/**
-	 * Higlights an error and ensures an Error is thrown so that the build script exits in shell.
-	 * It assumes {@param err} indicates an error
+	 * Find files based on glob pattern
 	 *
-	 * @param {*} err The error indicator
-	 */
+	 * @param globs
+	 * @param callback
+     */
 	findFiles: function( globs, callback ) {
 		var self = this;
 
@@ -36,5 +36,25 @@ module.exports = {
 			});
 
 		}
+	},
+
+	/**
+	 * Reads a file
+	 *
+	 * @param fileName
+	 * @returns {Promise}
+     */
+	readFile: function( fileName ) {
+		return new Promise(function(resolve, reject) {
+
+			fs.readFile(fileName, 'utf8', function(err, data) {
+				if (err) {
+					reject('Error reading file');
+				}
+
+				resolve(data);
+			});
+
+		});
 	}
 };
