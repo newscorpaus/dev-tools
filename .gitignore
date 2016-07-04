@@ -4,6 +4,7 @@ public/
 # Ignore temporary files
 DS_store
 .DS_store
+npm-debug.log
 
 # Ignore config files
 .npmrc

@@ -4,8 +4,6 @@ Below are the things we look for in code reviews. Code reviews are a perfect way
 
 ## Check out the code locally ##
 
-We use SASS as our CSS precompiler
-
 ## Ensure coding standards are followed ##
 
 ## Run the unit tests ##
@@ -13,3 +11,7 @@ We use SASS as our CSS precompiler
 ## Check for security issues ##
 
 ## Read through the code and understand it ##
+
+## Is there adequate documentation? ##
+
+## Does this code introduce technical debt? ##
