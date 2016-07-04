@@ -12,7 +12,7 @@ We use StyleLint to manage our CSS coding standards. The configuration can be fo
 
 ## StyleLint ##
 Running:
-stylelint "examples/*.scss"
+./node_modules/.bin/stylelint "examples/*.scss"
 npm install stylelint stylelint-scss
 
 ## Implementing linting ##
@@ -23,7 +23,7 @@ Explain how to implement methods in a new project @todo
 
 ## Auto Formatting ##
 usage:
-cat input.css | stylefmt
+./node_modules/.bin/stylefmt input.scss
 
 ## Helpful extensions ##
 [Autoprefixer][2]
