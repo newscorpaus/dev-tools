@@ -8,7 +8,13 @@ We use [ESLint][2] to manage our Javascript coding standards. The configuration 
 
 ## ESLint ##
 Running:
+
+npm run lint-js
+or
 ./node_modules/.bin/eslint ./examples/example.js
+
+## Ignoring a line ##
+// eslint-disable-line no-use-before-define
 
 ## Implementing linting ##
 
