@@ -24,7 +24,7 @@ console.log(colors.cyan('Checking repository setup: [' + repositoryDir + ']...\n
 var npmModulesToCheck = [{
 	npmKey: '"dev-tools"',
 	warning: '[x] Dev-tools repository is not installed',
-	prompt: 'To install run: npm install dev-tools --save-dev'
+	prompt: 'To install run: npm install git+ssh://git@stash.news.com.au/enghq/dev-tools.git --save-dev'
 }, {
 	npmKey: '"eslint"',
 	warning: '[x] ESLint is not installed',
@@ -49,6 +49,10 @@ var npmModulesToCheck = [{
 	npmKey: '"pre-commit"',
 	warning: '[x] Pre-commit is not installed',
 	prompt: 'To install run: npm install pre-commit --save-dev'
+}, {
+	npmKey: '"pre-commit": [',
+	warning: '[x] Pre-commit script is not defined',
+	prompt: 'To setup create a "pre-commit": [] script in your repo'
 }];
 
 // List of files to check exist in the repo

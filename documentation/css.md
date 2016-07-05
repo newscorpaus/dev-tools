@@ -21,6 +21,11 @@ Document scripts we have for SASS->CSS @todo
 
 Explain how to implement methods in a new project @todo
 
+## Ignoring lines in linting ##
+/* stylelint-disable */
+.anything-here-is-ignored {}
+/* stylelint-enable */
+
 ## Auto Formatting ##
 usage:
 ./node_modules/.bin/stylefmt input.scss

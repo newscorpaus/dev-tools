@@ -27,9 +27,11 @@ module.exports = {
 
 			utils.readFile(self.packageJsonFile).then(function( jsonContents ) {
 
-				if( 0 < jsonContents.indexOf(npmModule.npmKey) ) {
+				if( 0 > jsonContents.indexOf(npmModule.npmKey) ) {
 					console.log(colors.red(npmModule.warning));
 					console.log(colors.cyan('    ' + npmModule.prompt + '\n'));
+				} else {
+					console.log(colors.green('[x] ' + npmModule.npmKey + ' npm package already exists...\n'));
 				}
 
 				resolve();
@@ -54,7 +56,7 @@ module.exports = {
 			return true;
 		}
 
-		return this.checkModule( npmModule[index]).then(function() {
+		return this.checkModule( npmModule[index] ).then(function() {
 			return self.processNextModule(npmModule, (index + 1));
 		}).catch(function(err) {
 			console.log(colors.red(err));

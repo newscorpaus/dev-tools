@@ -12,6 +12,9 @@ Below are the things we look for in code reviews. Code reviews are a perfect way
 
 ## Read through the code and understand it ##
 
+## Can this code be made simpler? ##
+
 ## Is there adequate documentation? ##
 
 ## Does this code introduce technical debt? ##
+
