@@ -30,6 +30,7 @@
     "stylefmt": "^4.0.0",
     "stylelint": "^6.7.1",
     "stylelint-config-standard": "^9.0.0",
-    "stylelint-scss": "^1.2.0"
+    "stylelint-scss": "^1.2.0",
+    "tape": "^4.6.0"
   }
 }
