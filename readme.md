@@ -48,6 +48,11 @@ Developer Environment
 ---------------------
 Learn how to setup your [developer environment][10] within NewsCorp
 
+TODO
+----
+Look into https://www.npmjs.com/package/firebase
+Setup npm init
+
 [1]: documentation/css.md
 [2]: documentation/javascript.md
 [3]: .gitignore
