@@ -20,6 +20,11 @@ module.exports = {
 				if (true !== err) {
 					console.log(colors.red(fileObject.warning));
 
+					if( false === fileObject.prompt ) {
+						resolve();
+						return;
+					}
+
 					prompt.start({
 						message: ' - ',
 						delimiter: '  '
