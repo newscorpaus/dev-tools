@@ -14,7 +14,7 @@ or
 ./node_modules/.bin/eslint ./examples/example.js
 
 ## Ignoring a line ##
-// eslint-disable-line no-use-before-define
+// eslint-disable-line
 
 ## Implementing linting ##
 
