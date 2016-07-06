@@ -57,6 +57,10 @@ var npmModulesToCheck = [{
 
 // List of files to check exist in the repo
 var filesToCheck = [{
+	filename: repositoryDir + 'package.json',
+	warning: '[x] No package.json file exists - please create one!',
+	prompt: false
+},{
 	filename: repositoryDir + '.stylelintrc',
 	warning: '[x] No .stylelintrc file exists',
 	prompt: 'Would you like to copy it over?'
