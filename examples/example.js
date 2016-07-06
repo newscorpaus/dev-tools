@@ -1,7 +1,13 @@
-function example() {
-	var ex = 'example string';
+module.exports = {
+	/**
+	 * Render
+	 */
+	render: function() {
+		var exampleString = 'example string';
 
-	console.log(ex);
-}
+		console.log(exampleString);
 
-example();
+		return exampleString;
+	}
+};
+
