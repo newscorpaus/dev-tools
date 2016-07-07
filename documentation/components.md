@@ -7,28 +7,32 @@ All components are named lowercase with dashes, eg:
 * footer-navigation  
 
 ## Rules not to break ##
-All components will have a root level class name matching the name of the component, eg:
+* All components will have a root level class name matching the name of the component, eg:
+```
 <div class="story-list"></div>
+```
 
-Class name prefix matches component
+* Class name prefix matches component
 
-CSS child class names
+* CSS child class names
+```
 <div class="story-list">
 	<div class="story-list_heading-state">
 		<a class="story-list_heading_link-state"></a>
 	</div>
 </div>
+```
 
-Prefer use class selectors not IDs for CSS
+* Prefer use class selectors not IDs for CSS
 [id=something] instead of #id
 
-Don’t use really generic classes
+* Don’t use really generic classes
 
-Always build minified javascript
+* Always build minified javascript
 
-Preferred all components are responsiveness
+* Preferred all components are responsiveness
 
-Before creating any global/commons js/css - think very carefully!!!
+* Before creating any global/commons js/css - think very carefully!!!
 
 ## Directory/File Structure ##
 
