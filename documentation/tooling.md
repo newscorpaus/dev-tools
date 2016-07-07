@@ -2,10 +2,6 @@
 
 This repository has a lot of great scripts, this page shows how to automatically implement them into your repository.
 
-## Check if a repo is setup correctly ##
+## Setup a repository (or check an existing repo) ##
 
-* ./node_modules/.bin/check ./
-
-## Setup a repository ##
-
-* ./node_modules/.bin/setup ./
+node install-tools/install.js PATH_TO_YOUR_REPO_TO_CHECK_OR_INSTALL
