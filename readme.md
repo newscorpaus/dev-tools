@@ -40,6 +40,11 @@ Front-end component architecture
 --------------------------------
 Learn how we write "[front-end components][9]" within NewsCorp
 
+Front-end component architecture
+--------------------------------
+To document a todo use this format  
+@TODO // I need to get back to doing this
+
 Setting up a new project/repository
 -----------------------------------
 Learn about [tooling to setup][8] a new project/repository within NewsCorp

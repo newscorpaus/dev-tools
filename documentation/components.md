@@ -1,10 +1,10 @@
 # Front-end Components
 
 ## Naming standard ##
-All components are named lowercase with dashes, eg:  
+All components are named lowercase with dashes  
 * header  
 * story-list  
-* footer-navigation  
+* footer-navigation
 
 ## Rules not to break ##
 * All components will have a root level class name matching the name of the component, eg:  
