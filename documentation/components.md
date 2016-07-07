@@ -7,14 +7,14 @@ All components are named lowercase with dashes, eg:
 * footer-navigation  
 
 ## Rules not to break ##
-* All components will have a root level class name matching the name of the component, eg:
+* All components will have a root level class name matching the name of the component, eg:  
 ```
 <div class="story-list"></div>
 ```
 
-* Class name prefix matches component
+* Class name prefix matches component  
 
-* CSS child class names
+* CSS child class names  
 ```
 <div class="story-list">
 	<div class="story-list_heading-state">
@@ -23,7 +23,7 @@ All components are named lowercase with dashes, eg:
 </div>
 ```
 
-* Prefer use class selectors not IDs for CSS
+* Prefer use class selectors not IDs for CSS  
 [id=something] instead of #id
 
 * Don’t use really generic classes
