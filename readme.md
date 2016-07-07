@@ -34,7 +34,7 @@ Learn how we write "[Unit Testing][6]" within NewsCorp
 
 Code reviews
 ------------
-Learn how we do "[code reviews][7]" within NewsCorp
+Learn how we do "[Code Reviews][7]" within NewsCorp
  
 Front-end component architecture
 --------------------------------
