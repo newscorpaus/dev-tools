@@ -1,7 +1,7 @@
 # Front-end Components
 
 ## Naming standard ##
-All components are named lowercase with dashes, eg:
+All components are named lowercase with dashes, eg:  
 * header  
 * story-list  
 * footer-navigation  
@@ -34,17 +34,17 @@ Before creating any global/commons js/css - think very carefully!!!
 
 Component structure (Tangram)
 ```
-|--tg-tlc-story-list
-  |-- src
-    |-- assets
-      |-- story-list.scss
-      |-- story-list.js
-    |-- templates
-      |-- index.jade
-    |-- index.js <-- entry point
-    |-- lib
-  |-- test
-  |-- build
+|--tg-tlc-story-list  
+  |-- src  
+    |-- assets  
+      |-- story-list.scss  
+      |-- story-list.js  
+    |-- templates  
+      |-- index.jade  
+    |-- index.js <-- entry point  
+    |-- lib  
+  |-- test  
+  |-- build  
 ```
 
 Component structure (WordPress)
