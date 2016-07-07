@@ -35,11 +35,11 @@ Before creating any global/commons js/css - think very carefully!!!
 Component structure (Tangram)
 ```
 |--tg-tlc-story-list  
-  |-- src  
-    |-- assets  
-      |-- story-list.scss  
-      |-- story-list.js  
-    |-- templates  
+    |-- src  
+        |-- assets  
+            |-- story-list.scss  
+            |-- story-list.js  
+        |-- templates  
       |-- index.jade  
     |-- index.js <-- entry point  
     |-- lib  
