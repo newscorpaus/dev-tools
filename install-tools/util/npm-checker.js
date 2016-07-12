@@ -1,7 +1,7 @@
 'use strict';
 
 var utils = require('../../build-tools/utils');
-var colors = require('colors/safe');
+var logger = require('../util/logger');
 
 module.exports = {
 
@@ -37,17 +37,15 @@ module.exports = {
 				if( 0 > jsonContents.indexOf(npmModule.npmKey) ) {
 
 					if( 'error' == npmModule.errorLevel ) {
-						console.error(colors.red(npmModule.warning));
+						logger.logError(npmModule.warning);
 						if (true === self.install) {
-							console.log(colors.cyan('    ' + npmModule.prompt + '\n'));
-						} else {
-							console.log('');
+							logger.logDebug('    ' + npmModule.prompt);
 						}
 					} else {
-						console.log(colors.yellow(npmModule.warning + '\n'));
+						logger.logWarning(npmModule.warning);
 					}
 				} else {
-					console.log(colors.green('[x] ' + npmModule.name + ' npm package exists\n'));
+					logger.log('[x] ' + npmModule.name + ' npm package exist');
 				}
 
 				resolve();
@@ -74,7 +72,7 @@ module.exports = {
 		return this.checkModule( npmModules.shift() ).then(function() {
 			return self.checkAllModules(npmModules);
 		}).catch(function(err) {
-			console.log(colors.red(err));
+			logger.logError(err);
 		});
 	}
 };
