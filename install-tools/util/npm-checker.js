@@ -37,14 +37,14 @@ module.exports = {
 				if( 0 > jsonContents.indexOf(npmModule.npmKey) ) {
 
 					if( 'error' == npmModule.errorLevel ) {
-						console.log(colors.red(npmModule.warning));
+						console.error(colors.red(npmModule.warning));
 						if (true === self.install) {
 							console.log(colors.cyan('    ' + npmModule.prompt + '\n'));
 						} else {
 							console.log('');
 						}
 					} else {
-						console.error(colors.yellow(npmModule.warning + '\n'));
+						console.log(colors.yellow(npmModule.warning + '\n'));
 					}
 				} else {
 					console.log(colors.green('[x] ' + npmModule.name + ' npm package exists\n'));
