@@ -1,30 +1,36 @@
 'use strict';
 
-var colors = require('colors/safe');
 var checkRepo = require('./util/check-repo');
+var logger = require('./util/logger');
 var rmdir = require('rmdir');
 var Repo = require('git-tools');
-
 var parsedJSON = require('../package.json');
 var reposToValidate = parsedJSON['repos-to-validate'];
 
-console.log(colors.cyan('Checking [' + reposToValidate.length + '] repositories for validity...\n'));
+logger.logDebug('Checking [' + reposToValidate.length + '] repositories for validity...');
 
 (function checkNextRepo(repo) {
 
 	if (undefined === repo) {
-		console.log(colors.green('Repo check finished...\n'));
+		logger.log('Repo check finished...');
+
+		if( logger.hasError() ) {
+			logger.output();
+			process.exit(1);
+		} else {
+			logger.output();
+		}
+
 		return;
 	}
 
-	console.log(colors.cyan('Checking repository setup [' + repo + ']...\n'));
+	logger.logDebug('Checking repository setup [' + repo + ']...');
 
 	var repoName = repo.substr(repo.lastIndexOf('/') + 1).replace('.git', '');
 	var repositoryDir = './tmp/' + repoName;
 
 	if ('/' == repositoryDir.charAt(0)) {
-		console.log(colors.red('Disabled deleting a root directory\n'));
-		console.log('Disabled deleting a root directory');
+		logger.logError('Disabled deleting a root directory');
 		return;
 	}
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var argv = require('argv');
-var colors = require('colors/safe');
+var logger = require('./util/logger');
 var checkRepo = require('./util/check-repo');
 
 var argOptions = {
@@ -14,12 +14,12 @@ args = process.argv.slice(2);
 var repositoryDir = args[0];
 
 if (undefined == args[0]) {
-	return console.log(colors.red('Please pass an argument to the path of the repository'));
+	return logger.logError('Please pass an argument to the path of the repository');
 }
 
-console.log(colors.cyan('Checking repository: [' + repositoryDir + ']...\n'));
+logger.logDebug('Checking repository: [' + repositoryDir + ']...');
 
 // Check a single repo
 checkRepo.check(repositoryDir).catch(function(err) {
-	console.log(colors.red(err));
+	logger.logError(err);
 });
