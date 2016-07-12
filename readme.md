@@ -49,9 +49,9 @@ Setting up a new project/repository
 -----------------------------------
 Learn about [tooling to setup][8] a new project/repository within NewsCorp
 
-Developer Environment
----------------------
-Learn how to setup your [developer environment][10] within NewsCorp
+Onboarding/Developer Environment
+--------------------------------
+Learn how to onboard and setup your [developer environment][10] for different platforms within NewsCorp
 
 TODO
 ----
