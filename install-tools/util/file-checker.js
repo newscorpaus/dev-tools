@@ -8,12 +8,12 @@ var prompt = require('prompt');
 module.exports = {
 
 	/**
-	 *
+	 * Repository directory
 	 */
 	repositoryDir: null,
 
 	/**
-	 *
+	 * Whether to trigger install processes
 	 */
 	install: false,
 
@@ -23,13 +23,13 @@ module.exports = {
 	 * @param fileObject
 	 * @returns {Promise}
 	 */
-	checkFile: function (fileObject) {
+	checkFile: function(fileObject) {
 
 		var self = this;
 		var filename = self.repositoryDir + '/' + fileObject.filename;
 
-		return new Promise(function (resolve, reject) {
-			fs.exists(filename, function (err) {
+		return new Promise(function(resolve, reject) {
+			fs.exists(filename, function(err) {
 				if (true !== err) {
 					console.log(colors.red(fileObject.warning + '\n'));
 
@@ -56,11 +56,11 @@ module.exports = {
 						default: 'no'
 					};
 
-					prompt.get(property, function (err, result) {
+					prompt.get(property, function(err, result) {
 						if ('yes' == result.yesno) {
 							console.log(colors.green('    installing...'));
 
-							fs.copy(path.basename(filename), filename, {replace: false}, function (err) {
+							fs.copy(path.basename(filename), filename, { replace: false }, function(err) {
 								if (err) {
 									console.log(colors.red(err));
 									reject();
@@ -81,12 +81,13 @@ module.exports = {
 
 		});
 	},
+
 	/**
 	 *
-	 * @param npmModule
+	 * @param files
 	 * @returns {*}
 	 */
-	checkAllFiles: function (files) {
+	checkAllFiles: function(files) {
 
 		var self = this;
 
@@ -94,9 +95,9 @@ module.exports = {
 			return;
 		}
 
-		return this.checkFile(files.shift()).then(function () {
+		return this.checkFile(files.shift()).then(function() {
 			return self.checkAllFiles(files);
-		}).catch(function (err) {
+		}).catch(function(err) {
 			console.log(colors.red(err));
 		});
 	}

@@ -1,0 +1,33 @@
+[{
+	"filename": "package.json",
+	"warning": "[x] No package.json file exists - please create one!",
+	"prompt": false
+},{
+	"filename": ".stylelintrc",
+	"warning": "[x] No .stylelintrc file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": ".stylelintignore",
+	"warning": "[x] No .stylelintignore file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": ".eslintignore",
+	"warning": "[x] No .eslintignore file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": ".eslintrc",
+	"warning": "[x] No .eslintrc file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": ".editorconfig",
+	"warning": "[x] No .editorconfig file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": ".gitignore",
+	"warning": "[x] No .gitignore file exists",
+	"prompt": "Would you like to copy it over?"
+}, {
+	"filename": "readme.md",
+	"warning": "[x] No readme.md file exists",
+	"prompt": "Would you like to copy it over?"
+}]
