@@ -1,33 +1,33 @@
 'use strict';
 
-var utils = require('../build-tools/utils');
+var utils = require('../../build-tools/utils');
 var colors = require('colors/safe');
 
 module.exports = {
+
 	/**
-	 *
+	 * Link to package file
 	 */
 	packageJsonFile: null,
 
 	/**
-	 *
+	 * Whether to trigger install processes
 	 */
 	install: false,
 
 	/**
 	 * Check if an NPM module is installed
 	 *
-	 * @param packageJson
 	 * @param npmModule
 	 * @returns {Promise}
      */
 	checkModule: function(npmModule) {
 
 		var self = this;
+
 		return new Promise(function(resolve, reject) {
 
 			if( null == self.packageJsonFile ) {
-				//console.log(colors.red('No package.json file provided'));
 				reject('No package.json file provided');
 				return;
 			}
@@ -52,7 +52,7 @@ module.exports = {
 
 				resolve();
 
-			}).catch(function(err) {
+			}).catch(function() {
 				reject('[x] Could not read/find package.json');
 			});
 		});
@@ -60,7 +60,7 @@ module.exports = {
 
 	/**
 	 *
-	 * @param npmModule
+	 * @param npmModules
 	 * @returns {*}
      */
 	checkAllModules: function( npmModules ) {
