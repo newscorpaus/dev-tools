@@ -44,7 +44,7 @@ module.exports = {
 							console.log('');
 						}
 					} else {
-						console.log(colors.yellow(npmModule.warning + '\n'));
+						console.error(colors.yellow(npmModule.warning + '\n'));
 					}
 				} else {
 					console.log(colors.green('[x] ' + npmModule.name + ' npm package exists\n'));
