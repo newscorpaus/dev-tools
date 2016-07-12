@@ -35,12 +35,6 @@
 	"prompt": "To install run: npm install stylefmt --save-dev",
 	"errorLevel": "error"
 }, {
-	"name": "Never",
-	"npmKey": "\"never\"",
-	"warning": "[x] Never is not installed",
-	"prompt": "To install run: npm install never --save-dev",
-	"errorLevel": "error"
-}, {
 	"name": "Pre commit",
 	"npmKey": "\"pre-commit\"",
 	"warning": "[x] Pre-commit is not installed",
