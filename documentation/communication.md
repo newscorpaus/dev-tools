@@ -1,11 +1,6 @@
-# Developer Environment
+# Slack
 
-We currently have 2 development environments
-* WordPress 
-* Article Page
-
-Although both platforms use different technologies, your developer environment will work seemlessly together (this is in @todo).
-
+We use slack 
 ## WordPress ##
 
 * WordPress developer onboarding [see this wiki page][2]  
