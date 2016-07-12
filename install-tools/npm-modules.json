@@ -1,0 +1,55 @@
+[{
+	"name": "dev-tools",
+	"npmKey": "\"dev-tools\"",
+	"warning": "[x] Dev-tools repository is not installed",
+	"prompt": "To install run: npm install git+ssh://git@stash.news.com.au/enghq/dev-tools.git --save-dev",
+	"errorLevel": "warning"
+}, {
+	"name": "ESLint",
+	"npmKey": "\"eslint\"",
+	"warning": "[x] ESLint is not installed",
+	"prompt": "To install run: npm install eslint --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "StyleLint",
+	"npmKey": "\"stylelint\"",
+	"warning": "[x] Stylelint is not installed",
+	"prompt": "To install run: npm install stylelint --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "StyleLint SCSS",
+	"npmKey": "\"stylelint-scss\"",
+	"warning": "[x] Stylelint-scss is not installed",
+	"prompt": "To install run: npm install stylelint-scss --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "StyleLint Config Standard",
+	"npmKey": "\"stylelint-config-standard\"",
+	"warning": "[x] Stylelint-config-standard is not installed",
+	"prompt": "To install run: npm install stylelint-config-standard --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "Style Formatter",
+	"npmKey": "\"stylefmt\"",
+	"warning": "[x] Stylefmt is not installed",
+	"prompt": "To install run: npm install stylefmt --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "Never",
+	"npmKey": "\"never\"",
+	"warning": "[x] Never is not installed",
+	"prompt": "To install run: npm install never --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "Pre commit",
+	"npmKey": "\"pre-commit\"",
+	"warning": "[x] Pre-commit is not installed",
+	"prompt": "To install run: npm install pre-commit --save-dev",
+	"errorLevel": "error"
+}, {
+	"name": "Pre-commit configuration",
+	"npmKey": "\"pre-commit\": [",
+	"warning": "[x] Pre-commit script is not defined",
+	"prompt": "To setup create a \"pre-commit\": [] script in your repo",
+	"errorLevel": "error"
+}]

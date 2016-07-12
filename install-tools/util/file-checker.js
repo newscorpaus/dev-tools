@@ -8,19 +8,37 @@ var prompt = require('prompt');
 module.exports = {
 
 	/**
+	 *
+	 */
+	repositoryDir: null,
+
+	/**
+	 *
+	 */
+	install: false,
+
+	/**
 	 * Check if file exists/installed
 	 *
 	 * @param fileObject
 	 * @returns {Promise}
 	 */
-	checkFile: function(fileObject) {
+	checkFile: function (fileObject) {
 
-		return new Promise(function(resolve, reject) {
-			fs.exists(fileObject.filename, function(err) {
+		var self = this;
+		var filename = self.repositoryDir + '/' + fileObject.filename;
+
+		return new Promise(function (resolve, reject) {
+			fs.exists(filename, function (err) {
 				if (true !== err) {
-					console.log(colors.red(fileObject.warning));
+					console.log(colors.red(fileObject.warning + '\n'));
 
-					if( false === fileObject.prompt ) {
+					if (false === fileObject.prompt) {
+						resolve();
+						return;
+					}
+
+					if (true !== self.install) {
 						resolve();
 						return;
 					}
@@ -38,11 +56,11 @@ module.exports = {
 						default: 'no'
 					};
 
-					prompt.get(property, function(err, result) {
+					prompt.get(property, function (err, result) {
 						if ('yes' == result.yesno) {
 							console.log(colors.green('    installing...'));
 
-							fs.copy(path.basename(fileObject.filename), fileObject.filename, { replace: false }, function(err) {
+							fs.copy(path.basename(filename), filename, {replace: false}, function (err) {
 								if (err) {
 									console.log(colors.red(err));
 									reject();
@@ -56,7 +74,7 @@ module.exports = {
 						}
 					});
 				} else {
-					console.log(colors.green('[x] ' + path.basename(fileObject.filename) + ' already installed...\n'));
+					console.log(colors.green('[x] ' + path.basename(filename) + ' already installed...\n'));
 					resolve();
 				}
 			});
@@ -66,21 +84,21 @@ module.exports = {
 	/**
 	 *
 	 * @param npmModule
-	 * @param index
 	 * @returns {*}
 	 */
-	processNextFile: function(filesToCheck, index) {
+	checkAllFiles: function (files) {
 
 		var self = this;
 
-		if (undefined === filesToCheck[index]) {
+		if (0 == files.length) {
 			return;
 		}
 
-		this.checkFile(filesToCheck[index]).then(function() {
-			self.processNextFile(filesToCheck, (index + 1));
-		}).catch(function(err) {
+		return this.checkFile(files.shift()).then(function () {
+			return self.checkAllFiles(files);
+		}).catch(function (err) {
 			console.log(colors.red(err));
 		});
 	}
+
 };
