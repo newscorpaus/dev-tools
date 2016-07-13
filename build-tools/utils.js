@@ -46,10 +46,11 @@ module.exports = {
      */
 	readFile: function( fileName ) {
 		return new Promise(function(resolve, reject) {
-
 			fs.readFile(fileName, 'utf8', function(err, data) {
+
 				if (err) {
 					reject('Error reading file');
+					return;
 				}
 
 				resolve(data);
