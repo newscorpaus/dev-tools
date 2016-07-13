@@ -4,9 +4,14 @@ var colors = require('colors/safe');
 
 module.exports = {
 	/**
-	 *
+	 * Logs array
 	 */
 	logs: [],
+
+	/**
+	 * Output immediately
+	 */
+	outputOnLog: false,
 
 	/**
 	 * Log a message
@@ -22,10 +27,14 @@ module.exports = {
 		};
 
 		this.logs.push(log);
+
+		if( this.outputOnLog ) {
+			this.output();
+		}
 	},
 
 	/**
-	 * Log a message
+	 * Log an error message
 	 *
 	 * @param message
 	 * @param level
@@ -35,7 +44,7 @@ module.exports = {
 	},
 
 	/**
-	 * Log a message
+	 * Log a debug message
 	 *
 	 * @param message
 	 * @param level
@@ -45,10 +54,17 @@ module.exports = {
 	},
 
 	/**
-	 * Log a message
+	 * Log a warning message
 	 *
 	 * @param message
 	 * @param level
+	 */
+	logWarning: function(message) {
+		this.log(message, 'warning');
+	},
+
+	/**
+	 * Check if an error exists in logs
 	 */
 	hasError: function() {
 
@@ -64,10 +80,10 @@ module.exports = {
 	},
 
 	/**
-	 * Log a message
+	 * Get color from error level
 	 *
-	 * @param message
 	 * @param level
+	 * @param string color
 	 */
 	getColorFromErrorLevel: function(level) {
 		switch( level ) {
@@ -88,10 +104,7 @@ module.exports = {
 	},
 
 	/**
-	 * Log a message
-	 *
-	 * @param message
-	 * @param level
+	 * Output all log messages
 	 */
 	output: function() {
 		var self = this;

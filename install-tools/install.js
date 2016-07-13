@@ -5,6 +5,9 @@ var logger = require('./util/logger');
 var npmChecker = require('./util/npm-checker');
 var checkRepo = require('./util/check-repo');
 
+// Ensure all logs are outputted immediately
+logger.outputOnLog = true;
+
 var argOptions = {
 	name: 'Dev tools installer',
 	type: 'boolean'

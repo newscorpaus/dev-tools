@@ -1,52 +1,55 @@
 {
-  "name": "dev-tools",
-  "version": "0.1.0",
-  "description": "dev-tools for NewsCorp front-end engineering team",
-  "scripts": {
-    "pre-commit": "npm run lint; npm run test;",
-    "lint": "npm run lint-css; npm run lint-js",
-    "lint-css": "stylelint --syntax scss '**/*.scss'",
-    "lint-js": "eslint --quiet .",
-    "build-css": "node scripts/css.js",
-    "build-js": "node scripts/js.js",
-    "test": "node ./node_modules/.bin/mocha examples/test/mocha-example.js; node examples/test/tape-example.js",
-    "check-all": "node ./install-tools/check-all.js"
-  },
-  "pre-commit": [
-    "pre-commit"
-  ],
-  "author": "",
-  "dependencies": {},
-  "devDependencies": {
-    "argv": "0.0.2",
-    "autoprefixer": "^6.3.7",
-    "chai": "^3.5.0",
-    "colors": "^1.1.2",
-    "echint": "^1.5.3",
-    "editorconfig-tools": "^0.1.1",
-    "eslint": "^2.13.1",
-    "eslint-plugin-json": "^1.2.0",
-    "fs-extra": "^0.30.0",
-    "fs.extra": "^1.3.2",
-    "git-tools": "^0.2.1",
-    "glob": "^7.0.5",
-    "jsonlint": "^1.6.2",
-    "mocha": "^2.5.3",
-    "node-sass": "^3.8.0",
-    "postcss": "^5.0.21",
-    "pre-commit": "^1.1.3",
-    "prompt": "^1.0.0",
-    "rmdir": "^1.2.0",
-    "stylefmt": "^4.0.0",
-    "stylelint": "^6.7.1",
-    "stylelint-config-standard": "^9.0.0",
-    "stylelint-scss": "^1.2.0",
-    "tape": "^4.6.0",
-    "twig": "^0.9.5"
-  },
-  "repos-to-validate": [
-    "ssh://git@stash.news.com.au/spp/plugin-config-manager.git",
-    "ssh://git@stash.news.com.au/spp/plugin-content-negotiation.git",
-    "ssh://git@stash.news.com.au/spp/plugin-fiso.git"
-  ]
+	"name": "dev-tools",
+	"version": "0.1.0",
+	"description": "dev-tools for NewsCorp front-end engineering team",
+	"scripts": {
+		"pre-commit": "npm run lint; npm run test;",
+		"lint": "npm run lint-css; npm run lint-js",
+		"lint-css": "stylelint --syntax scss '**/*.scss'",
+		"lint-js": "eslint --quiet .",
+		"build-css": "node scripts/css.js",
+		"build-js": "node scripts/js.js",
+		"test": "node ./node_modules/.bin/mocha examples/test/mocha-example.js; node examples/test/tape-example.js",
+		"check-all": "node ./install-tools/check-all.js"
+	},
+	"pre-commit": [
+		"pre-commit"
+	],
+	"author": "",
+	"dependencies": {},
+	"devDependencies": {
+		"argv": "0.0.2",
+		"autoprefixer": "^6.3.7",
+		"chai": "^3.5.0",
+		"colors": "^1.1.2",
+		"diff": "^2.2.3",
+		"echint": "^1.5.3",
+		"editorconfig-tools": "^0.1.1",
+		"eslint": "^2.13.1",
+		"eslint-plugin-json": "^1.2.0",
+		"fs-extra": "^0.30.0",
+		"fs.extra": "^1.3.2",
+		"git-tools": "^0.2.1",
+		"glob": "^7.0.5",
+		"jsonlint": "^1.6.2",
+		"mocha": "^2.5.3",
+		"node-sass": "^3.8.0",
+		"postcss": "^5.0.21",
+		"pre-commit": "^1.1.3",
+		"prompt": "^1.0.0",
+		"rmdir": "^1.2.0",
+		"stylefmt": "^4.0.0",
+		"stylelint": "^6.7.1",
+		"stylelint-config-standard": "^9.0.0",
+		"stylelint-scss": "^1.2.0",
+		"tape": "^4.6.0",
+		"twig": "^0.9.5"
+	},
+	"repos-to-validate": [
+		"ssh://git@stash.news.com.au/spp/plugin-config-manager.git",
+		"ssh://git@stash.news.com.au/spp/plugin-content-feed.git",
+		"ssh://git@stash.news.com.au/spp/plugin-fiso.git",
+		"ssh://git@stash.news.com.au/spp/theme-escape.git",
+		"ssh://git@stash.news.com.au/spp/theme-metro.git"
+	]
 }
