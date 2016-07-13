@@ -14,6 +14,7 @@ module.exports = {
 	 */
 	check: function(repositoryDir, install) {
 		return new Promise(function(resolve, reject) {
+
 			npmChecker.packageJsonFile = repositoryDir + '/package.json';
 			npmChecker.install = install;
 

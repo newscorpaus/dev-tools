@@ -20,6 +20,9 @@ if (undefined == args[0]) {
 logger.logDebug('Checking repository: [' + repositoryDir + ']...');
 
 // Check a single repo
-checkRepo.check(repositoryDir).catch(function(err) {
+checkRepo.check(repositoryDir).then(function() {
+	logger.output();
+}).catch(function(err) {
 	logger.logError(err);
+	logger.output();
 });
