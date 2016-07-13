@@ -50,6 +50,7 @@
 		"ssh://git@stash.news.com.au/spp/plugin-content-feed.git",
 		"ssh://git@stash.news.com.au/spp/plugin-fiso.git",
 		"ssh://git@stash.news.com.au/spp/theme-escape.git",
-		"ssh://git@stash.news.com.au/spp/theme-metro.git"
+		"ssh://git@stash.news.com.au/spp/theme-metro.git",
+		"ssh://git@stash.news.com.au/spp/theme-metro-reimagine.git"
 	]
 }
