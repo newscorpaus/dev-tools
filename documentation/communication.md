@@ -3,8 +3,8 @@
 Most of our communications happen within Slack. Below is a list of useful channels to join
 
 ## General channels ##
-#newscorp-development (General development in NewsCorp)
-#general (General Newscorp discussions)
+# #newscorp-development (General development in NewsCorp)
+# #general (General Newscorp discussions)
 #random (Random chats and giphys)
 
 ## Tech channels ##
